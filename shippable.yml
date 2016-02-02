@@ -6,13 +6,12 @@ node_js:
   - 0.12
 
 env:
-  global:
-    - FOO=FUBU
-    - secure: tho3T0iMKF3px7Qw0FmCAKmnGwITAEBNihR8MKGtspBTVMHS74mg3MyYPBFn4/b8oEyqylnVFbPAABnTX/PEA1dN9KJUaGszbHRA38SfzqAdMiG52XkhbM7hH0efTbNmvVSqJef73LzAOsL2dCRclRT8HTRWvIpzBQq4HbkZPMh83AJvlr5fZNbsOgueEUjx5PSga10oL2nK7y3o8Cq7KQlGxL5g+kqubZmzGl7lkNCmh5MT8vLzlbe/K9wm7BFbspOv4RFdjC+8ltN/riLnhbAU5ceQo5+W3rjQWjfIYMr6LFzD9aebjpN4/h0GswbsupKXB0TlClpL02u34ec4+w==
+  - FOO=FUBU
+  - secure: tho3T0iMKF3px7Qw0FmCAKmnGwITAEBNihR8MKGtspBTVMHS74mg3MyYPBFn4/b8oEyqylnVFbPAABnTX/PEA1dN9KJUaGszbHRA38SfzqAdMiG52XkhbM7hH0efTbNmvVSqJef73LzAOsL2dCRclRT8HTRWvIpzBQq4HbkZPMh83AJvlr5fZNbsOgueEUjx5PSga10oL2nK7y3o8Cq7KQlGxL5g+kqubZmzGl7lkNCmh5MT8vLzlbe/K9wm7BFbspOv4RFdjC+8ltN/riLnhbAU5ceQo5+W3rjQWjfIYMr6LFzD9aebjpN4/h0GswbsupKXB0TlClpL02u34ec4+w==
 
 
-  matrix:
-    - M1=ONE
+  #matrix:
+   # - M1=ONE
 
 build:
   pre_ci:
