@@ -21,7 +21,7 @@ build:
   pre_ci_boot:
     image_name: shippabledocker/hitchcock4_sample_node
     image_tag: latest
-    pull: false
+    pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
@@ -30,8 +30,8 @@ build:
     - echo "$FOO"
     - echo "$TOO"
 
- # post_ci:
-  #  - docker push shippabledocker/hitchcock4_sample_node
+  post_ci:
+    - docker push shippabledocker/hitchcock4_sample_node
 
 integrations:
   hub:
