@@ -8,31 +8,33 @@ node_js:
 env:
   global:
     - FOO=FUBU
+    - secure: tho3T0iMKF3px7Qw0FmCAKmnGwITAEBNihR8MKGtspBTVMHS74mg3MyYPBFn4/b8oEyqylnVFbPAABnTX/PEA1dN9KJUaGszbHRA38SfzqAdMiG52XkhbM7hH0efTbNmvVSqJef73LzAOsL2dCRclRT8HTRWvIpzBQq4HbkZPMh83AJvlr5fZNbsOgueEUjx5PSga10oL2nK7y3o8Cq7KQlGxL5g+kqubZmzGl7lkNCmh5MT8vLzlbe/K9wm7BFbspOv4RFdjC+8ltN/riLnhbAU5ceQo5+W3rjQWjfIYMr6LFzD9aebjpN4/h0GswbsupKXB0TlClpL02u34ec4+w==
+
 
   matrix:
     - M1=ONE
 
 build:
-  pre_ci:
-    - docker build -t=shippabledocker/hitchcock4_sample_node .
+ # pre_ci:
+  #  - docker build -t=shippabledocker/hitchcock4_sample_node .
 
-  pre_ci_boot:
-    image_name: shippabledocker/hitchcock4_sample_node
-    image_tag: latest
-    pull: false
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+  p#re_ci_boot:
+    #image_name: shippabledocker/hitchcock4_sample_node
+    #image_tag: latest
+    #pull: false
+    #options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
     - ps -eax
     - ls -al
+    - echo "$FOO"
+    - echo "$TOO"
 
-  post_ci:
-    - docker push shippabledocker/hitchcock4_sample_node
+ # post_ci:
+  #  - docker push shippabledocker/hitchcock4_sample_node
 
 integrations:
   hub:
     - integrationName: ship-docker
       type: docker
-      branches:
-        only:
-          - master
+      
