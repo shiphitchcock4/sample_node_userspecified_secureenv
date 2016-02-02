@@ -8,31 +8,32 @@ node_js:
 env:
   global:
     - FOO=FUBU
+    - secure: S5Mz3/QABGPzlPE7zUfRnakXv0fO243QsKFSlbz//awNkmOaV4gSRvoXxuWFQF4XBMAwgBKsIRioKWOnp19Ru9FeJbd7IyLXT0Q7c9f/3Pe/NofQJDJO0yaVgluuaHm2pa+XfBiuv6+FsAR0myavxsy27jnx64gAG4Voyuv73QNn9/sq2yXfwXP34I++mE7nvE5OIA2MsKIb+TMb0kkC7YJFWxNoMmnl2acohu9mZORabrOlNxFE1LYJjlCKiFxq5qFHAO9jQL0WzHo3eGoUOmY8lZDYgH66jpIvgb0GD/2479Zh49F4vgGho9QfHQGfh21o1rvDDH0og9FM5+8hWQ==
 
   matrix:
     - M1=ONE
 
 build:
-  pre_ci:
-    - docker build -t=shippabledocker/hitchcock4_sample_node .
+  #pre_ci:
+   # - docker build -t=shippabledocker/hitchcock4_sample_node .
 
   pre_ci_boot:
-    image_name: shippabledocker/hitchcock4_sample_node
-    image_tag: latest
-    pull: false
+    image_name: drydock/u12nodpls
+    image_tag: tip
+    pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
     - ps -eax
     - ls -al
+    - echo"$FOO"
+    - echo "$too"
 
-  post_ci:
-    - docker push shippabledocker/hitchcock4_sample_node
+#  post_ci:
+ #   - docker push shippabledocker/hitchcock4_sample_node
 
 integrations:
   hub:
     - integrationName: ship-docker
       type: docker
-      branches:
-        only:
-          - master
+      
