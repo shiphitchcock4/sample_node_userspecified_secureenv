@@ -7,7 +7,7 @@ node_js:
 
 env:
   global:
-    - FOO=FUBU     
+    - FOO=FUBU      
     - secure: S5Mz3/QABGPzlPE7zUfRnakXv0fO243QsKFSlbz//awNkmOaV4gSRvoXxuWFQF4XBMAwgBKsIRioKWOnp19Ru9FeJbd7IyLXT0Q7c9f/3Pe/NofQJDJO0yaVgluuaHm2pa+XfBiuv6+FsAR0myavxsy27jnx64gAG4Voyuv73QNn9/sq2yXfwXP34I++mE7nvE5OIA2MsKIb+TMb0kkC7YJFWxNoMmnl2acohu9mZORabrOlNxFE1LYJjlCKiFxq5qFHAO9jQL0WzHo3eGoUOmY8lZDYgH66jpIvgb0GD/2479Zh49F4vgGho9QfHQGfh21o1rvDDH0og9FM5+8hWQ==
 
   matrix:
